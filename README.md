@@ -2,9 +2,25 @@
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=sngxpro)](https://github.com/anuraghazra/github-readme-stats)
 
+## 更新日志
+
+```
+3月26日9:15，
+
+1、增加了对 奇趣史蒂夫 脚本库的拉取
+2、增加了对 songyangzz 脚本库的拉取
+3、增加了对 iepngs 脚本库的拉取
+4、增加了对 lowking 脚本库的拉取
+
+3月26日9:00，
+
+1、修复了 chavyleung 脚本库无法正确拉取的bug ，可以重新fork本项目获取更新，可以到chavyleung.yml中复制代码修改到您的仓库
+
+```
+
 ^_^
 
-#### AutoSyncScript
+### AutoSyncScript项目介绍
 ```
 此项目用于定时拉取github上各作者的脚本备份。
 
@@ -54,7 +70,13 @@
 18、完事了
 
 ```
-看不懂的可参考一下下面这个文。
+看不懂的可参考一下下面文章。
+
+1、本项目图文教程
+
+https://mp.weixin.qq.com/s/gOA8PSwLfhp9bLLnBkJf-Q
+
+2、拉取项目原理举例
 
 https://mp.weixin.qq.com/s/fcI4vQHD8TNajvTML9g3AA
 
