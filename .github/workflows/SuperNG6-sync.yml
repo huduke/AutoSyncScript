@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+name: SuperNG6-sync
+on:
+  schedule:
+    - cron: '25 */3 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-SuperNG6-bilibili
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync SuperNG6-bilibili
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/SuperNG6/docker-bilibili-helper.git"
+          source_branch: "main"
+          destination_branch: "SuperNG6"
+          github_token: ${{ secrets.PAT }}
